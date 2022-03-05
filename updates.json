@@ -1,0 +1,77 @@
+{
+  "status": {
+    "timestamp": "2022-02-27T14:30:51.622Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 33,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "slug": "bitcoin",
+      "num_market_pairs": 9186,
+      "date_added": "2013-04-28T00:00:00.000Z",
+      "tags": [
+        "mineable",
+        "pow",
+        "sha-256",
+        "store-of-value",
+        "state-channel",
+        "coinbase-ventures-portfolio",
+        "three-arrows-capital-portfolio",
+        "polychain-capital-portfolio",
+        "binance-labs-portfolio",
+        "blockchain-capital-portfolio",
+        "boostvc-portfolio",
+        "cms-holdings-portfolio",
+        "dcg-portfolio",
+        "dragonfly-capital-portfolio",
+        "electric-capital-portfolio",
+        "fabric-ventures-portfolio",
+        "framework-ventures-portfolio",
+        "galaxy-digital-portfolio",
+        "huobi-capital-portfolio",
+        "alameda-research-portfolio",
+        "a16z-portfolio",
+        "1confirmation-portfolio",
+        "winklevoss-capital-portfolio",
+        "usv-portfolio",
+        "placeholder-ventures-portfolio",
+        "pantera-capital-portfolio",
+        "multicoin-capital-portfolio",
+        "paradigm-portfolio"
+      ],
+      "max_supply": 21000000,
+      "circulating_supply": 18969593,
+      "total_supply": 18969593,
+      "is_active": 1,
+      "platform": null,
+      "cmc_rank": 1,
+      "is_fiat": 0,
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "last_updated": "2022-02-27T14:29:00.000Z",
+      "quote": {
+        "RUB": {
+          "price": 3275029.9616314103,
+          "volume_24h": 1639552440346.1516,
+          "volume_change_24h": -16.1606,
+          "percent_change_1h": -1.78538316,
+          "percent_change_24h": -0.68590562,
+          "percent_change_7d": 0.98684397,
+          "percent_change_30d": 5.47899881,
+          "percent_change_60d": -17.55052939,
+          "percent_change_90d": -31.72509133,
+          "market_cap": 62125985434953.48,
+          "market_cap_dominance": 41.7293,
+          "fully_diluted_market_cap": 68775629194259.45,
+          "last_updated": "2022-02-27T14:30:13.000Z"
+        }
+      }
+    }
+  }
+}
