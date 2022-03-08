@@ -6,6 +6,7 @@ from telegram.ext import CallbackContext
 from telegram.ext import Updater
 from telegram.ext import Filters
 from telegram.ext import MessageHandler, CommandHandler, ConversationHandler
+from COIN_MARKET_CAP import price_of_crypto
 
 CRYPT = "USD"
 CURRENCY = "BITCOIN"
@@ -28,40 +29,9 @@ def get_price(update: Update, context: CallbackContext):
     global CURRENCY
     CURRENCY = update.message.text
     print(CURRENCY)
-    price = price_of_bit(CRYPT, CURRENCY)
+    price = price_of_crypto(CRYPT, CURRENCY)
     update.message.reply_text(text=f"Цена {CRYPT} в {CURRENCY}: {price}")
     return ConversationHandler.END
-
-
-def price_of_bit(crypto, currency):
-    try:
-        crypto = crypto.lower()
-        currency = currency.upper()
-
-        url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
-        parameters = {
-            'slug': f'{crypto}',
-            'convert': f'{currency}'
-        }
-        headers = {
-            'Accepts': 'application/json',
-            'X-CMC_PRO_API_KEY': '881ca7de-a5a6-4971-885a-3d800be10159',
-        }
-
-        session = requests.Session()
-        session.headers.update(headers)
-
-        response = session.get(url, params=parameters)
-        with open("updates.json", "w") as file:
-            json.dump(response.json(), file, indent=2, ensure_ascii=False)
-        data = json.loads(response.text)
-        for k in data["data"]:
-            id = k
-            print(k)
-        price = data["data"][f"{id}"]["quote"][f'{currency}']["price"]
-        return price
-    except Exception as e:
-        print(e)
 
 
 def stop(update: Update, context: CallbackContext):
